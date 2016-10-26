@@ -3,5 +3,6 @@
     
     <Button text="TAP" (tap)="onTap()"></Button>
 
-    <Label [text]="message" class="message" textWrap="true"></Label>
+    <Label *ngFor="let todo of (todos$ | async)" [text]="todo.text" textWrap="true"></Label>
+    
 </StackLayout>
