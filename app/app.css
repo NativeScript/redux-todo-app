@@ -64,9 +64,9 @@ Button.completed {
   margin: 4;
   width: 100;
   border-radius: 4;
-  border-color: #157EFB;  
+  border-color: #5DC2AF;  
   color: white;
-  background-color: #157EFB;  
+  background-color: #5DC2AF;  
 
 }
 
@@ -74,7 +74,7 @@ Button.completed {
   margin: 4;
   width: 100;
   border-radius: 4;  
-  border-color: #157EFB;
-  color: #157EFB;
+  border-color: #5DC2AF;
+  color: #5DC2AF;
   background-color: white;
 }
