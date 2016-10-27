@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "patch": "node patch.js"
+    "remotedev": "remotedev --hostname=localhost --port=8000"
   },
   "dependencies": {
     "@angular/common": "2.1.0",
@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "2.1.0",
     "@angular/router": "3.1.0",
     "nativescript-angular": "1.1.0",
+    "nativescript-redux-devtools": "0.0.1",
     "nativescript-websockets": "^1.3.0",
     "ng2-redux": "^4.0.0-beta.0",
     "redux": "^3.6.0",
@@ -38,6 +39,7 @@
     "babylon": "6.13.0",
     "lazy": "1.0.11",
     "nativescript-dev-typescript": "^0.3.2",
+    "remotedev-server": "^0.2.0",
     "typescript": "^2.0.6",
     "zone.js": "~0.6.21"
   }
