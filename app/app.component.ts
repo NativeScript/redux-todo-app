@@ -32,8 +32,8 @@ export class AppComponent {
 
   constructor(private ngRedux: NgRedux<IAppState>) {
     this.fitleredToDos$ = ngRedux.select((s) => s).map(({filter, todos}) => {
-      if(!todos) return [];
-      
+      if (!todos) return [];
+
       if (filter === "active") {
         return todos.filter(todo => !todo.completed);
       } else if (filter === "done") {

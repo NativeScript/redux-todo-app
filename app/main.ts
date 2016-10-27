@@ -33,7 +33,9 @@ class AppComponentModule {
     ngRedux.provideStore(configureStore(undefined));
     ngRedux.subscribe(() => {
       if (!NgZone.isInAngularZone()) {
-        appRef.tick();
+        setTimeout(() => {
+          appRef.tick();
+        }, 10); 
       }
     });
 
