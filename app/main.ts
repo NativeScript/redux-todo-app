@@ -5,7 +5,7 @@ require('nativescript-websockets');
 import { platformNativeScriptDynamic, NativeScriptModule } from "nativescript-angular/platform";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import "./polyfills";
-import { NgModule } from "@angular/core";
+import { NgModule, NgZone, ApplicationRef } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./components/header.component";
 import { ToDoListComponent } from "./components/todo-list.component";
@@ -23,8 +23,14 @@ import { configureStore } from "./store/configure-store";
     NgReduxModule],
 })
 class AppComponentModule {
-  constructor(ngRedux: NgRedux<IAppState>) {
+  constructor(ngRedux: NgRedux<IAppState>, appRef: ApplicationRef) {
     ngRedux.provideStore(configureStore(undefined));
+    ngRedux.subscribe(() => {
+      if (!NgZone.isInAngularZone()) {
+        appRef.tick();
+      }
+    });
+
   }
 }
 

@@ -7,7 +7,6 @@ var initialState = [{
     }];
 function todos(state, action) {
     if (state === void 0) { state = initialState; }
-    console.log("--->" + action.type);
     switch (action.type) {
         case actions_1.ADD_TODO:
             return [{
