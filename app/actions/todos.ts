@@ -1,4 +1,4 @@
-import * as types from '../reducers/actions';
+import * as types from '../reducers/constants';
 
 export function addTodo(text) {
   return { type: types.ADD_TODO, text };

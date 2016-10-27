@@ -6,4 +6,5 @@ export interface ToDo {
 
 export interface IAppState {
   todos: Array<ToDo>;
+  filter: string;
 }

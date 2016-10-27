@@ -2,9 +2,14 @@
 var core_1 = require('@angular/core');
 var ToDoListComponent = (function () {
     function ToDoListComponent() {
+        this.row = 0;
         this.toggleToDo = new core_1.EventEmitter();
         this.deleteToDo = new core_1.EventEmitter();
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], ToDoListComponent.prototype, "row", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Array)
@@ -20,7 +25,7 @@ var ToDoListComponent = (function () {
     ToDoListComponent = __decorate([
         core_1.Component({
             selector: 'td-todo-list',
-            template: "\n<StackLayout>\n    <td-todo *ngFor=\"let todo of todos\" \n      [todo]=\"todo\" \n      (toggle)=\"toggleToDo.next(todo.id)\"\n      (delete)=\"deleteToDo.next(todo.id)\">\n    </td-todo>\n</StackLayout>\n  "
+            template: "\n  <ScrollView [row]=\"row\">\n    <StackLayout>\n        <td-todo *ngFor=\"let todo of todos\" \n          [todo]=\"todo\" \n          (toggle)=\"toggleToDo.next(todo.id)\"\n          (delete)=\"deleteToDo.next(todo.id)\">\n        </td-todo>\n    </StackLayout>\n  </ScrollView>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], ToDoListComponent);

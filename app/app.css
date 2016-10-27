@@ -59,3 +59,22 @@ Button.completed {
   border-radius: 4;
   border-color: #5CA793;
 }
+
+.filter-selected {
+  margin: 4;
+  width: 100;
+  border-radius: 4;
+  border-color: #157EFB;  
+  color: white;
+  background-color: #157EFB;  
+
+}
+
+.filter-unselected {
+  margin: 4;
+  width: 100;
+  border-radius: 4;  
+  border-color: #157EFB;
+  color: #157EFB;
+  background-color: white;
+}

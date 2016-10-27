@@ -1,5 +1,5 @@
 "use strict";
-var types = require('../reducers/actions');
+var types = require('../reducers/constants');
 function addTodo(text) {
     return { type: types.ADD_TODO, text: text };
 }

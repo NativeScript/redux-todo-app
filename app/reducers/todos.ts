@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, TOGGLE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from './actions';
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, TOGGLE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from './constants';
 
 const initialState = [{
   text: 'Use Redux',
