@@ -1,18 +1,61 @@
 ﻿.header {
-  font-size: 42;
+  font-size: 60;
   text-align: center;
+  font-weight: 200;
   margin: 12;
 }
 
-.pending {
+TextField {
+  font-size: 24;
+  vertical-align: center;
+}
+
+Label.pending {
   font-size: 20;
   color: #284848;
   margin: 12;
 } 
 
-.completed {
+Label.completed {
   font-size: 20;  
   text-decoration: line-through;
   color: gray;
   margin: 12;  
+}
+
+Button {
+  width: 32;
+  height: 32;
+  padding: 0;  
+  font-size: 20;    
+  border-width: 1;
+}
+
+Button.pending, Button.completed  {
+  border-radius: 16;
+  margin-right: 12; 
+} 
+
+Button.pending  {
+  border-color: #284848;
+} 
+
+Button.completed {
+  color: #5DC2AF;
+  border-color: #5DC2AF;
+}
+
+.delete {
+  color: #ED5E68;
+  font-weight: bold;
+  border-radius: 4;
+  border-color: #ED5E68;
+}
+
+.add {
+  color: white;
+  background-color: #5CA793;
+  font-weight: bold;
+  border-radius: 4;
+  border-color: #5CA793;
 }

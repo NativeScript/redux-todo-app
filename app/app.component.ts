@@ -7,7 +7,7 @@ import { addTodo, deleteTodo, toggleTodo } from "./actions/todos";
 @Component({
   selector: "my-app",
   template: `
-  <StackLayout>
+  <StackLayout margin="12">
     
     <td-header (addToDo)="addToDo($event)"></td-header>
 

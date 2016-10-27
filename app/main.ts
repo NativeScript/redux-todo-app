@@ -28,4 +28,5 @@ class AppComponentModule {
   }
 }
 
-platformNativeScriptDynamic().bootstrapModule(AppComponentModule);
+platformNativeScriptDynamic({ startPageActionBarHidden: true, bootInExistingPage: false })
+  .bootstrapModule(AppComponentModule);

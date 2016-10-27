@@ -20,7 +20,7 @@ var ToDoComponent = (function () {
     ToDoComponent = __decorate([
         core_1.Component({
             selector: 'td-todo',
-            template: "\n<GridLayout columns=\"auto * auto\" rows=\"auto\">\n    <Button col=\"0\" [text]=\"todo.completed ? 'done' : 'undo'\" (tap)=\"toggle.next()\"></Button>\n    <Label col=\"1\" [text]=\"todo.text\" textWrap=\"true\" \n      [class.completed]=\"todo.completed\"\n      [class.pending]=\"!todo.completed\"></Label>\n    <Button col=\"2\" text=\"x\" (tap)=\"delete.next()\"></Button>\n</GridLayout>\n  "
+            template: "\n<GridLayout columns=\"auto * auto\" rows=\"auto\">\n    <Button col=\"0\" [text]=\"todo.completed ? '\u2713' : ' '\" (tap)=\"toggle.next()\"\n      [class.completed]=\"todo.completed\"\n      [class.pending]=\"!todo.completed\"></Button>\n    <Label col=\"1\" [text]=\"todo.text\" textWrap=\"true\" \n      [class.completed]=\"todo.completed\"\n      [class.pending]=\"!todo.completed\"></Label>\n    <Button col=\"2\" text=\"\u2717\" (tap)=\"delete.next()\" class=\"delete\"></Button>\n</GridLayout>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], ToDoComponent);

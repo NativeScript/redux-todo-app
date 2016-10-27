@@ -4,11 +4,13 @@ import {ToDo} from "../models";
   selector: 'td-todo',
   template: `
 <GridLayout columns="auto * auto" rows="auto">
-    <Button col="0" [text]="todo.completed ? 'done' : 'undo'" (tap)="toggle.next()"></Button>
+    <Button col="0" [text]="todo.completed ? '✓' : ' '" (tap)="toggle.next()"
+      [class.completed]="todo.completed"
+      [class.pending]="!todo.completed"></Button>
     <Label col="1" [text]="todo.text" textWrap="true" 
       [class.completed]="todo.completed"
       [class.pending]="!todo.completed"></Label>
-    <Button col="2" text="x" (tap)="delete.next()"></Button>
+    <Button col="2" text="✗" (tap)="delete.next()" class="delete"></Button>
 </GridLayout>
   `
 })
