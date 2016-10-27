@@ -1,8 +1,0 @@
-<StackLayout>
-    <Label text="Tap the button" class="title"></Label>
-    
-    <Button text="TAP" (tap)="onTap()"></Button>
-
-    <Label *ngFor="let todo of (todos$ | async)" [text]="todo.text" textWrap="true"></Label>
-    
-</StackLayout>

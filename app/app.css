@@ -1,19 +1,18 @@
-﻿button, label, stack-layout {
-    horizontal-align: center;    
+﻿.header {
+  font-size: 42;
+  text-align: center;
+  margin: 12;
 }
 
-button {
-    font-size: 36;
-}
-
-.title {
-    font-size: 30;
-    margin: 20;
-}
-
-.message {
-    font-size: 20;
-    color: #284848;
-    text-align: center;
-    margin: 0 20;
+.pending {
+  font-size: 20;
+  color: #284848;
+  margin: 12;
 } 
+
+.completed {
+  font-size: 20;  
+  text-decoration: line-through;
+  color: gray;
+  margin: 12;  
+}

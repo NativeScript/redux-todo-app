@@ -25,7 +25,7 @@ function todos(state, action) {
                     Object.assign({}, todo, { text: action.text }) :
                     todo;
             });
-        case actions_1.COMPLETE_TODO:
+        case actions_1.TOGGLE_TODO:
             return state.map(function (todo) {
                 return todo.id === action.id ?
                     Object.assign({}, todo, { completed: !todo.completed }) :

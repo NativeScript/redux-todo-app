@@ -12,10 +12,10 @@ function editTodo(id, text) {
     return { type: types.EDIT_TODO, id: id, text: text };
 }
 exports.editTodo = editTodo;
-function completeTodo(id) {
-    return { type: types.COMPLETE_TODO, id: id };
+function toggleTodo(id) {
+    return { type: types.TOGGLE_TODO, id: id };
 }
-exports.completeTodo = completeTodo;
+exports.toggleTodo = toggleTodo;
 function completeAll() {
     return { type: types.COMPLETE_ALL };
 }

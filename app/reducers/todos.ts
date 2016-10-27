@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, COMPLETE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from './actions';
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, TOGGLE_TODO, COMPLETE_ALL, CLEAR_COMPLETED } from './actions';
 
 const initialState = [{
   text: 'Use Redux',
@@ -29,7 +29,7 @@ export function todos(state = initialState, action) {
         todo
     );
 
-  case COMPLETE_TODO:
+  case TOGGLE_TODO:
     return state.map(todo =>
       todo.id === action.id ?
         Object.assign({}, todo, { completed: !todo.completed }) :
